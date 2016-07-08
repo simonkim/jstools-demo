@@ -68,6 +68,25 @@ From command line, type,
 node sample.js
 ```
 
+## Testing
+
+To run browser tests, open <code>jasmine/SpecRunner.html</code> in a browser.
+
+To run tests from command line,
+
+First, install Jasmine NPM module,
+```
+npm install -g jasmine
+```
+
+Run Node based tests,
+```
+npm run test
+```
+
+This runs Jasmine spec defined in spec/hlsm3u8spec.js.
+
+
 ## Sample code
 In HTML for browser run,
 ```
@@ -82,3 +101,4 @@ In HTML for browser run,
     // ...
 </script>
 ```
+
