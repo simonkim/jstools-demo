@@ -51,15 +51,34 @@ Create index.js with the following line,
 console.log('hello');
 ```
 
+<blockquote>
+After this, lib/hlsm3u8.js, index.js, and sample.js have been created and implemented. 
+</blockquote>
+
+## Build
+Build command invokes <code>webpack</code> to build code into public/dist/hlsm3u8.js for browser use.
+```
+npm run build
+```
+
 ## Run
 
 From command line, type,
 ```
-node index.js
+node sample.js
 ```
 
-And you will get,
+## Sample code
+In HTML for browser run,
 ```
-hello
+<script src="dist/hlsm3u8.js"></script>
+<script type="text/javascript">
+    var text = '#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=2215351,BANDWIDTH=2266597,CODECS="avc1.640020,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=59.940,CLOSED-CAPTIONS="cc1",AUDIO="aud1",SUBTITLES="sub1"';
+    var hlsm3u8 = new Hlsm3u8();
+    var attrs = hlsm3u8.streamInfoAttrs(text);
+    var strings = attrs.map(function(attr, index){
+        return attr.attr + ': ' + attr.value;
+    });
+    // ...
+</script>
 ```
-

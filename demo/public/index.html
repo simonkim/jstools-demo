@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <div id="content">
+            <textarea id="input" rows=4 cols=80></textarea> <button id="convert">Parse</button>
+            <p id="output"></p>
+        </div>
+        <script src="dist/hlsm3u8.js"></script>
+        <script type="text/javascript">
+            $('#input').val('#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=2215351,BANDWIDTH=2266597,CODECS="avc1.640020,mp4a.40.2",RESOLUTION=960x540,FRAME-RATE=59.940,CLOSED-CAPTIONS="cc1",AUDIO="aud1",SUBTITLES="sub1"');
+            $('#convert').click(function(e) {
+                var text = $('#input').val();
+                var hlsm3u8 = new Hlsm3u8();
+                var attrs = hlsm3u8.streamInfoAttrs(text);
+                var strings = attrs.map(function(attr, index){
+                    return attr.attr + ': ' + attr.value;
+                });
+                $( '#output' ).html( '<ul><li>' + strings.join('</li><li>') + '</li>' );
+            });
+        </script>
+    </body>
+</html>
+
