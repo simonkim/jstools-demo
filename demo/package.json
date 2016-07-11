@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "build": "webpack -d"
+    "build": "webpack -d",
+    "release": "webpack -d"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
 }
