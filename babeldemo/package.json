@@ -1,0 +1,17 @@
+{
+  "name": "babeldemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sample-es6.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel sample-es6.js > sample.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
