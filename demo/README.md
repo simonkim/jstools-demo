@@ -56,6 +56,12 @@ After this, lib/hlsm3u8.js, index.js, and sample.js have been created and implem
 </blockquote>
 
 ## Build
+
+Install npm dependencies first,
+```
+npm install
+```
+
 Build command invokes <code>webpack</code> to build code into public/dist/hlsm3u8.js for browser use.
 ```
 npm run build
@@ -102,3 +108,10 @@ In HTML for browser run,
 </script>
 ```
 
+## Documents
+Build API documents,
+```
+npm run docs
+```
+
+And then open <code>docs/index.html</code> in a browser.

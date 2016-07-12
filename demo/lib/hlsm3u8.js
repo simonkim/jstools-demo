@@ -1,6 +1,20 @@
+/**
+* This is the description for my class.
+*
+* @class Hlsm3u8
+* @constructor
+*/
 function Hlsm3u8() {
 }
 
+/**
+* My method description.  Like other pieces of your comment blocks, 
+* this can span multiple lines.
+*
+* @method streamInfoAttrs
+* @param {String} input A text line prefixed with '#EXT-X-STREAM-INF:' lin'
+* @return {Array} Returns array of objects each contains values of 'attr' and 'value' keys
+*/
 Hlsm3u8.prototype.streamInfoAttrs = function(input) {
     var result = [];
     const re = /#EXT-X-STREAM-INF:([^\n\r]*)/g;

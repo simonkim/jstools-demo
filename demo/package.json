@@ -6,11 +6,13 @@
   "scripts": {
     "test": "jasmine",
     "build": "webpack -d",
-    "release": "webpack -d"
+    "release": "webpack -d",
+    "docs": "yuidoc"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "yuidocjs": "^0.10.2"
   }
 }
